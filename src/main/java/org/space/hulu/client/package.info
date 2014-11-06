@@ -1,0 +1,6 @@
+The primary function supported by Hulu client are :
+1. Located group information
+2. Uploading control
+3. Reading chunk
+4. Handling network exception
+5. key conversion

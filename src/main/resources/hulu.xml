@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+	<property>
+		<name>storage.group.info</name>
+		<value>3322#2#2</value>
+		<description>${groupId}#${group replication factor}#${number in this group(start from 1)}, 
+						example: 322#3#1</description>
+	</property>
+	
+	<property>
+		<name>storage.group.host</name>
+		<value>localhost</value>
+		<description>version of this configuration file</description>
+	</property>
+
+	<property>
+		<name>storage.cache.filePointer.initialCacheNumberCapacity</name>
+		<value>100000</value>
+		<description>file pointer cache: initial capacity to avoid resize
+		</description>
+	</property>
+
+	<property>
+		<name>storage.cache.fileContent.initialCacheNumberCapacity</name>
+		<value>100000</value>
+		<description>file content cache: initial capacity to avoid resize
+		</description>
+	</property>
+	
+	<property>
+		<name>zookeeper.quorum</name>
+		<value>localhost:2181</value>
+		<description>ZK cluster information</description>
+	</property>
+	
+	<property>
+		<name>zookeeper.sessiontimeout</name>
+		<value>1000</value>
+		<description>ZK connection timeout</description>
+	</property>
+	
+	<property>
+		<name>storage.data.dir</name>
+		<value>d:\hulu\take2</value>
+		<description>local disk</description>
+	</property>
+	
+	<property>
+		<name>group.rootpath</name>
+		<value>/hulu</value>
+		<description>ZK connection timeout</description>
+	</property>
+	
+	<!-- as default native heap use same size with java heap(-Xmx), so should change the size use(example):  -XX:MaxDirectMemorySize=100M-->
+ 	<!-- load 64 bit jvm to allow allocated size can bigger than 4G(or less): -d64 -->
+  	<property>
+		<name>storage.cache.fileContent.enable</name>
+		<value>true</value>
+		<description>is enable file content cache</description>
+	</property>
+ 
+ 	<!-- 256M -->
+	<property>
+		<name>storage.cache.fileContent.totalSize</name>
+		<value>256000000</value>
+		<description>max allowed size for fileContent in native heap</description>
+	</property>
+
+</configuration>
